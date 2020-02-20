@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package edu.usfca.protobuf;
+
+import "common.proto";
+import "vendor/openrtb.proto";
+
+// This defines a log message that "our bidding servers" will create.
+// Each BidLog message contains the original BidRequest and other useful information.
+// Each BidRequest is expected to result in at most one BidLog from our servers (it could be "lossy").
+message BidLog {
+    // Original BidRequest proto.
+    com.google.openrtb.BidRequest bid_request = 1;
+
+    Exchange exchange = 2;
+
+    int64 recv_at = 3;
+    int64 processed_at = 4;
+
+    // Result code from bidder engine.
+    BidResult bid_result = 5;
+
+    // DeviceId
+    DeviceId device_id = 6;
+
+    enum BidResult {
+        UNKNOWN_RESULT = 0;
+        BID = 1;
+        NO_CANDIDATE = 2;
+        INVALID_REQUEST = 3;
+    }
+}
+
+enum Exchange {
+    UNKNOWN_EXCHANGE = 0;
+    ADX = 1;
+    MOPUB = 2;
+    UNITY = 3;
+}

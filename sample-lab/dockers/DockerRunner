@@ -1,0 +1,8 @@
+FROM gradle-base-4.10.3
+COPY --chown=gradle:gradle . /home
+RUN chown -R gradle /home
+WORKDIR /home
+RUN gradle -v
+CMD ["gradle","clean"]
+CMD ["gradle","test", "-p", "java/judge", "--continue"]
+
