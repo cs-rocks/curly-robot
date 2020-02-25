@@ -8,8 +8,6 @@ Extra Credit "Cards": https://github.com/users/haden-usf/projects/1
 # VIZ/FUN/UX stuff #
 - VIZ03 (Na): See https://github.com/cs-rocks/curly-robot/tree/master/sample-data/scores and https://github.com/cs-rocks/curly-robot/tree/master/sample-data/reports
 
-- VIZ02 (Ornelle): See https://github.com/cs-rocks/curly-robot/tree/master/sample-data/scores and https://github.com/cs-rocks/curly-robot/tree/master/sample-data/reports
-
 - UX01 (Zini & Lacee): See https://github.com/cs-rocks/curly-robot/tree/master/sample-data/scores and https://github.com/cs-rocks/curly-robot/tree/master/sample-data/reports
 
 - FUN01 (Tong): See https://github.com/cs-rocks/curly-robot/tree/master/sample-data/scores and https://github.com/cs-rocks/curly-robot/tree/master/sample-data/reports
