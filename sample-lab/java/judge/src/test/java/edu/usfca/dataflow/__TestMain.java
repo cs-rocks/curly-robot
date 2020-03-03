@@ -11,13 +11,17 @@ import org.junit.Test;
 // in order to grade your submission.
 public class __TestMain extends __TestBase {
   @Test
-  public void testGetUserEmail() {
-    assertNotEquals("", Main.getUserEmail());
+  public void testGetUserEmail() throws Exception {
+//    assertEquals("", Main.getUserEmail());
+    throw new Exception("generic error message. Doesn't matter");
   }
 
   @Test
-  public void testShortAnswer() {
-    assertNotEquals("", Main.shortAnswer());
+  public void testShortAnswer() throws Exception {
+
+//    assertNotEquals("", Main.shortAnswer());
+    throw new Exception("generic error message2. Doesn't matter");
+
   }
 
   // ----------------
