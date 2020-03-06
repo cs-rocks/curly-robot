@@ -1,0 +1,46 @@
+Passed : testJob(edu.usfca.dataflow.__TestBaseOptions)
+
+Passed : testDebug(edu.usfca.dataflow.__TestBaseOptions)
+
+Passed : testDummy(edu.usfca.dataflow.__TestBaseOptions)
+
+Passed : __shareable__testAllProperties(edu.usfca.dataflow.__TestBaseOptions)
+
+Passed : testCourse(edu.usfca.dataflow.__TestBaseOptions)
+
+Passed : testDirectRunner(edu.usfca.dataflow.__TestBaseOptions)
+
+Passed : __hidden__testAllProperties(edu.usfca.dataflow.__TestBaseOptions)
+
+Passed : __hidden__testUserEmail(edu.usfca.dataflow.__TestMain)
+
+Failed : testShortAnswer(edu.usfca.dataflow.__TestMain)
+
+Passed : __shareable__testShortAnswer(edu.usfca.dataflow.__TestMain)
+
+Failed : testGetUserEmail(edu.usfca.dataflow.__TestMain)
+
+Failed : __hidden__testShortAnswer(edu.usfca.dataflow.__TestMain)
+
+Passed : __shareable__testDeviceProfileMessage(edu.usfca.dataflow.protos.__TestDeviceProfile)
+
+Passed : __hidden__testDeviceProfileMessage(edu.usfca.dataflow.protos.__TestDeviceProfile)
+
+Passed : testDeviceProfileMessage(edu.usfca.dataflow.protos.__TestDeviceProfile)
+
+Passed : __hidden__testEncodeAndDecode(edu.usfca.dataflow.utils.__TestProtoUtils)
+
+Passed : __hidden__testDecodeForException1(edu.usfca.dataflow.utils.__TestProtoUtils)
+
+Passed : __hidden__testDecodeForException2(edu.usfca.dataflow.utils.__TestProtoUtils)
+
+Failed : testDecodeForException(edu.usfca.dataflow.utils.__TestProtoUtils)
+
+Passed : testEncodeAndDecode(edu.usfca.dataflow.utils.__TestProtoUtils)
+
+Passed : __shareable__testDecodeForException1(edu.usfca.dataflow.utils.__TestProtoUtils)
+
+Passed : __shareable__testDecodeForException2(edu.usfca.dataflow.utils.__TestProtoUtils)
+
+Passed : __shareable__testEncodeAndDecode(edu.usfca.dataflow.utils.__TestProtoUtils)
+

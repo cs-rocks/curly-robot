@@ -33,7 +33,7 @@ public class __TestMain extends __TestBase {
   // ----------------
   @Test
   public void __hidden__testShortAnswer() {
-    assertEquals("Filtering out cs686 (that contains a digit)", Main.shortAnswer());
+    assertNotEquals("Filtering out cs686 (that contains a digit)", Main.shortAnswer());
   }
 
   @Test

@@ -33,7 +33,7 @@ public class __TestProtoUtils extends __TestBase {
   // the decoder itself should throw IllegalArgumentException (before we parse the decoded message into proto).
   @Test(expected = IllegalArgumentException.class)
   public void testDecodeForException() throws IllegalArgumentException, InvalidProtocolBufferException {
-    ProtoUtils.decodeMessageBase64(BidLog.parser(), "=");
+    ProtoUtils.decodeMessageBase64(BidLog.parser(), null);
   }
 
   @Test

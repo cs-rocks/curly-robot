@@ -17,33 +17,39 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.fail;
 
 public class Watchdog extends TestWatcher {
-    private static String exceptionLogs;
 
     @Override
     protected void starting(Description desc) {
     //nothing to do here
-        System.out.println("shazam!");
     }
 
     @Override
     protected void failed(Throwable e, Description description) {
+        String exceptionLogs;
         exceptionLogs = description + "\n";
+        writeToFile("Failed : " + exceptionLogs + "\n", "status");
+        if(e.getMessage() != null){
+            exceptionLogs += e.getMessage() + "\n";
+        }
+        exceptionLogs += e.getClass().getName() + "\n";
         List<String> exceptions = Arrays.stream(e.getStackTrace()).map(StackTraceElement::toString).collect(Collectors.toList());
         exceptionLogs += "EXCEPTION: " +String.join("\t\n", exceptions) + "\n\n";
-        writeException();
+        writeToFile(exceptionLogs, "errors");
     }
 
     @Override
     protected void succeeded(Description description) {
-        //nothing to do here
+        String succeededLogs;
+        succeededLogs = "Passed : " + description + "\n\n";
+        writeToFile(succeededLogs, "status");
     }
 
-    public void writeException() {
+    private void writeToFile(String logs, String fileName) {
         try {
-            File file = new File("errors");
+            File file = new File(fileName);
             CharSink chs = Files.asCharSink(
                     file, Charsets.UTF_8, FileWriteMode.APPEND);
-            chs.write(exceptionLogs);
+            chs.write(logs);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,7 +57,8 @@ public class Watchdog extends TestWatcher {
 
     @Test
     public void fails() {
-        //fail();
+        //This function can be called from the fail function
+        //Can be used to extend functionality
     }
 
     @Test
